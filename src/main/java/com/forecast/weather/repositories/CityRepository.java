@@ -11,7 +11,7 @@ import com.forecast.weather.domain.City;
 @Repository
 public interface CityRepository extends GenericRepository<City>{
 	
-	@Query(value = "select c from City c where c.Capital=true and c.Country = :country")
+	@Query(value = "select c from City c where c.Capital=true and c.Country = :country ORDER BY c.Name ASC")
 	List<City> GetCapitals(@Param("country") String country);
 	
 }

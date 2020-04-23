@@ -36,12 +36,12 @@ public class OpenWeatherService  {
 	  
 	  
 	  public  JSONObject GetOnCallByLatLon(float lat,float lon)  throws Throwable {
-		  String Url = oncallAPI + "lat=" + lat + "&lon=" + lon + "&appid=" + apiKey ;
+		  String Url = oncallAPI + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + apiKey ;
 		  return ExecuteAndGetResponseJson(Url);
   	  }
 	
 	  public  JSONObject GetCurrentByLocation(String location) throws Throwable  {
-		  String Url = baseAPI + URLEncoder.encode(location, "utf-8") + "&appid=" + apiKey ;
+		  String Url = baseAPI + URLEncoder.encode(location, "utf-8") + "&units=metric&appid=" + apiKey ;
 		  return ExecuteAndGetResponseJson(Url);
   	  }
 	  

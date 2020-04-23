@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS CITIES;
+DROP TABLE IF EXISTS WEATHER_DATA;
 
 CREATE TABLE CITIES (
   id INT AUTO_INCREMENT  PRIMARY KEY,
@@ -9,3 +10,19 @@ CREATE TABLE CITIES (
   capital BOOLEAN
 );
 
+CREATE TABLE WEATHER_DATA (
+   data TIMESTAMP NOT NULL,
+   idCityApi INT NOT NULL,
+   nameCity VARCHAR(250),
+   cloudsPercent INT,
+   weatherDescription VARCHAR(100),
+   weatherIcon VARCHAR(30),
+   temp DOUBLE,
+   tempMin DOUBLE,
+   tempMax DOUBLE,
+   pressure DOUBLE,
+   humidity DOUBLE,
+   speedWind DOUBLE
+ );
+ 
+ ALTER TABLE WEATHER_DATA ADD PRIMARY KEY (data, idCityApi);
