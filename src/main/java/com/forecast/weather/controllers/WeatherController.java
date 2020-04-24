@@ -27,11 +27,20 @@ public class WeatherController {
 	@GetMapping("/current")
 	public WeatherData getCurrentMetrics(@RequestParam String cityName,
 			                             @RequestParam String countryAcronym) {
- 	  
+
 		return weatherService.getCurrentMetrics(cityName,countryAcronym);
  	  
     } 
+	
+	@GetMapping("/history")
+	public List<WeatherData> getCurrentMetrics(@RequestParam Long idCity
+			                             ) {
+
+		return weatherService.getHourlyToday(idCity);
+ 	  
+    } 
   
+	
 	
 	
 	
