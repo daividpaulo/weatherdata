@@ -1,14 +1,16 @@
 # WeatherData APIs
 
-Para executar o projeto é necessario seguir os seguintes passos:
+Para executar o projeto é necessário seguir os seguintes passos:
 
-1) Realizar download ou executar o camando abaixo:
+1) Realizar download ou executar o comando abaixo:
 -- git clone https://github.com/daividpaulo/weatherdata.git
 
 2) Este projeto foi desenvolvido com as tecnologias JAVA 8 e Spring Boot com suporte MAVEN, para executar o projeto:
+
 -- mvn spring-boot:run
 
-3) Para realizar um deploy você poderá utilizar o proprio maven para criação do arquivo de deploy .war
+3) Para realizar um deploy você poderá utilizar o próprio maven para criação do arquivo de deploy .war
+
 -- mvn resources:resources compiler:compile war:war
 ** Este arquivo será gerado na pasta Target dentro do projeto.
 
